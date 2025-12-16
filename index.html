@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Daily 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Code Every Day 2025</h1>
+        <p class="subtitle">A Coding Challenge. Every. Single. Day</p>
+        <div class="button-group">
+          <button class="add-btn" onclick="openAddModal()">
+            + Add Challenge
+          </button>
+          <button class="clear-btn" onclick="confirmClear()">
+            Clear All & Start Fresh
+          </button>
+        </div>
+      </header>
+
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close" onclick="closeModal()">&times;</button>
+        <div class="modal-day" id="modalDay"></div>
+        <h2 id="modalTitle" style="display: none"></h2>
+        <p id="modalDescription" style="display: none"></p>
+        <pre class="code-block" id="modalCode"></pre>
+      </div>
+    </div>
+
+    <!-- Add Challenge Modal -->
+    <div class="modal" id="addModal">
+      <div class="modal-content">
+        <button class="close" onclick="closeAddModal()">&times;</button>
+        <h2>Add New Challenge</h2>
+        <form id="addForm">
+          <div class="form-group">
+            <label for="dayInput">Day Number:</label>
+            <input type="number" id="dayInput" required />
+          </div>
+
+          <div class="form-group">
+            <label for="dateInput">Date:</label>
+            <input type="date" id="dateInput" required />
+          </div>
+
+          <div class="form-group">
+            <label for="codeInput">Your Code:</label>
+            <textarea id="codeInput" rows="12" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Add Challenge</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
